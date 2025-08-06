@@ -1,163 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Seung - Portfolio</title>
+
   <style>
-    :root {
-      --primary-color: #3a86ff;
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-      --card-bg: #ffffff;
-      --border-radius: 10px;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    header {
+    .seung1{
+      color:red;
       text-align: center;
-      margin-bottom: 40px;
+      font-weight: lighter;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
-      color: var(--primary-color);
-    }
 
-    header p {
-      font-size: 1.2em;
-      color: #666;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-    }
-
-    .about p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    ul.repo-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul.repo-list li {
-      background-color: var(--card-bg);
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-    }
-
-    ul.repo-list li a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    ul.repo-list li a:hover {
-      text-decoration: underline;
-    }
-
-    .repo-description {
-      color: #666;
-      font-size: 0.95em;
-    }
-
-    footer {
+    .seung2{
+      color:aqua;
       text-align: center;
-      font-size: 0.9em;
-      color: #999;
-      margin-top: 40px;
+      
+
+
     }
   </style>
+
+
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Seung</h1>
-      <p>Creative Developer | Lifelong Learner | Open to Opportunities</p>
-    </header>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        Hey there! I'm Seung — a passionate developer who loves crafting beautiful, functional websites and applications. I believe in clean code, pixel-perfect design, and continuous learning.
-      </p>
-      <p>
-        When I'm not coding, you'll find me exploring new tech trends, contributing to open-source, or tinkering with design ideas.
-      </p>
-    </section>
+  <h1 class="seung1">hello! welcome to my site</h1>
+  <h2 class="seung2">this is my personal site and i have all details here.</h2>
 
-    <section class="projects">
-      <h2>GitHub Projects</h2>
-      <ul class="repo-list" id="github-projects">
-        <li>Loading projects...</li>
-      </ul>
-    </section>
 
-    <footer>
-      <p>&copy; 2025 Seung. Made with ❤️ and clean HTML.</p>
-    </footer>
-  </div>
 
-  <script>
-    const githubUsername = 'your-github-username'; // ← replace with your GitHub username
-    const projectsList = document.getElementById('github-projects');
 
-    async function fetchGitHubProjects() {
-      try {
-        const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=5`);
-        const projects = await response.json();
-
-        if (!projects.length) {
-          projectsList.innerHTML = '<li>No public projects found.</li>';
-          return;
-        }
-
-        projectsList.innerHTML = '';
-        projects.forEach(project => {
-          const li = document.createElement('li');
-          li.innerHTML = `
-            <a href="${project.html_url}" target="_blank" rel="noopener noreferrer">${project.name}</a>
-            <span class="repo-description">${project.description || 'No description provided.'}</span>
-          `;
-          projectsList.appendChild(li);
-        });
-      } catch (error) {
-        console.error('Error:', error);
-        projectsList.innerHTML = '<li>Failed to load projects. Try again later.</li>';
-      }
-    }
-
-    fetchGitHubProjects();
-  </script>
 </body>
-</html>
