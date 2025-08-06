@@ -1,0 +1,45 @@
+    .seung1{
+      color:red;
+      text-align: center;
+      font-weight: lighter;
+    }
+
+
+    .seung2{
+      color:aqua;
+      text-align: center;
+      }
+.seung3{
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content:space-between;
+  background-color: aquamarine;
+  
+}
+
+
+.s31 {
+    width: 30%;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+.s32 {
+    width: 30%;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+}
+.s33 {
+    width: 30%;
+    background-color: lightcoral;
+    padding: 10px;
+    border-radius: 5px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b18282;
+    margin: 0;
+    padding: 20px;
+}
