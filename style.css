@@ -57,3 +57,21 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.letsjava {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+button:hover {
+    background-color: lightcoral;
+    color: white;
+}
