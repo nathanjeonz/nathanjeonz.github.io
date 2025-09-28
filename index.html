@@ -6,8 +6,60 @@
 </head>
 
 <body>
-<section class="header">
-  <h1 class="seung1">hello! welcome to my site</h1>
+<div class="main-bg">
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Hello! Welcome to My Site</h1>
+      <h2 class="site-subtitle">This is my personal site. All my details and projects are here.</h2>
+    </div>
+  </header>
+  <section class="projects-section">
+    <div class="container">
+      <div class="projects-grid">
+        <div class="project-card">
+          <a href="snake_game_intro.html">
+            <img src="images/snake.png" alt="Snake Game Beta" class="project-img">
+            <h3>Project 1: Snake Game Beta</h3>
+            <p>A simple starting code of the game snake.</p>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="ping_pong_intro.html">
+            <img src="images/pong.png" alt="Ping Pong" class="project-img">
+            <h3>Project 2: Ping Pong</h3>
+            <p>A simple digital ping pong game.</p>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="pygame_snake.html">
+            <img src="images/snake_finalised.png" alt="Snake Game Finalised" class="project-img">
+            <h3>Project 3: Snake Game Finalised</h3>
+            <p>A complete version of the snake game with advanced features.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bulb-section">
+    <div class="container bulb-container">
+      <h2 class="bulb-title">Try My Interactive Bulb!</h2>
+      <div class="bulb-controls">
+        <button class="button1" onclick="turn_on_bulb()">Turn on</button>
+        <button class="button2" onclick="turn_off_bulb()">Turn off</button>
+      </div>
+      <img id="bulb" src="images/off_bulb.png" alt="Bulb" class="bulb-img">
+    </div>
+  </section>
+</div>
+
+<script>
+  function turn_on_bulb() {
+    document.getElementById("bulb").src = "images/on_bulb.png";
+  }
+  function turn_off_bulb() {
+    document.getElementById("bulb").src = "images/off_bulb.png";
+  }
+</script>
   <h2 class="seung2">this is my personal site and i have all details here.</h2>
 
   <div class="seung3">
