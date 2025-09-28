@@ -5,117 +5,102 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 <div class="main-bg">
   <header class="site-header">
     <div class="container">
-      <h1 class="site-title">Hello! Welcome to My Site</h1>
-      <h2 class="site-subtitle">This is my personal site. All my details and projects are here.</h2>
+      <h1 class="site-title">👋 Hi, I'm Nathan Jeonz</h1>
+      <h2 class="site-subtitle">Welcome to my personal website!<br>Explore my projects and try the interactive bulb below.</h2>
+      <nav class="nav-bar">
+        <a href="#projects">Projects</a>
+        <a href="#bulb">Bulb Demo</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
-  <section class="projects-section">
+  <main>
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">🚀 My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <a href="snake_game_intro.html">
+              <img src="images/snake.png" alt="Snake Game Beta" class="project-img">
+              <h3>Snake Game Beta</h3>
+              <p>A simple starting code of the game snake.</p>
+            </a>
+          </div>
+          <div class="project-card">
+            <a href="ping_pong_intro.html">
+              <img src="images/pong.png" alt="Ping Pong" class="project-img">
+              <h3>Ping Pong</h3>
+              <p>A simple digital ping pong game.</p>
+            </a>
+          </div>
+          <div class="project-card">
+            <a href="pygame_snake.html">
+              <img src="images/snake_finalised.png" alt="Snake Game Finalised" class="project-img">
+              <h3>Snake Game Finalised</h3>
+              <p>A complete version of the snake game with advanced features.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bulb" class="bulb-section">
+      <div class="container bulb-container">
+        <h2 class="bulb-title">💡 Try My Interactive Bulb!</h2>
+        <div class="bulb-controls">
+          <button class="button1" onclick="turn_on_bulb()">Turn on</button>
+          <button class="button2" onclick="turn_off_bulb()">Turn off</button>
+        </div>
+        <img id="bulb-img" src="images/off_bulb.png" alt="Bulb" class="bulb-img">
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <h2 class="section-title">📬 Contact Me</h2>
+        <form class="contact-form" autocomplete="off">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="button1">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
     <div class="container">
-      <div class="projects-grid">
-        <div class="project-card">
-          <a href="snake_game_intro.html">
-            <img src="images/snake.png" alt="Snake Game Beta" class="project-img">
-            <h3>Project 1: Snake Game Beta</h3>
-            <p>A simple starting code of the game snake.</p>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="ping_pong_intro.html">
-            <img src="images/pong.png" alt="Ping Pong" class="project-img">
-            <h3>Project 2: Ping Pong</h3>
-            <p>A simple digital ping pong game.</p>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="pygame_snake.html">
-            <img src="images/snake_finalised.png" alt="Snake Game Finalised" class="project-img">
-            <h3>Project 3: Snake Game Finalised</h3>
-            <p>A complete version of the snake game with advanced features.</p>
-          </a>
-        </div>
-      </div>
+      <p>© 2025 Nathan Jeonz. All rights reserved.</p>
+      <p>Made with ❤️ and CSS.</p>
     </div>
-  </section>
-  <section class="bulb-section">
-    <div class="container bulb-container">
-      <h2 class="bulb-title">Try My Interactive Bulb!</h2>
-      <div class="bulb-controls">
-        <button class="button1" onclick="turn_on_bulb()">Turn on</button>
-        <button class="button2" onclick="turn_off_bulb()">Turn off</button>
-      </div>
-      <img id="bulb" src="images/off_bulb.png" alt="Bulb" class="bulb-img">
-    </div>
-  </section>
+  </footer>
 </div>
 
 <script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav-bar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  // Bulb logic
   function turn_on_bulb() {
-    document.getElementById("bulb").src = "images/on_bulb.png";
+    document.getElementById("bulb-img").src = "images/on_bulb.png";
   }
   function turn_off_bulb() {
-    document.getElementById("bulb").src = "images/off_bulb.png";
+    document.getElementById("bulb-img").src = "images/off_bulb.png";
   }
+  // Contact form demo
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for reaching out! (Demo only)');
+    this.reset();
+  });
 </script>
-  <h2 class="seung2">this is my personal site and i have all details here.</h2>
-
-  <div class="seung3">
-    <div class="sss">
-      <a  href="snake_game_intro.html">
-      <h1 style="text-align: center;">project 1</h1>
-      <h2>Snake game beta</h2>
-      <p>A simple starting code of the game snake. </p>
-      <img src="images/snake.png" alt="not loaded" height="200">
-      </a>
-    </div>
-    <div class="sss">
-      <a  href="ping_pong_intro.html">
-      <h1 style="text-align: center;">Project 2</h1>
-      <h2>Ping pong</h2>
-      <p> a simple digital ping pong game</p>
-      <img src="images/pong.png" alt="not loaded" height="200">
-      </a>
-    </div>
-    <div class="sss">
-      <a  href="pygame_snake.html">
-      <h1 style="text-align: center;">Project 3</h1>
-      <h2>Snake game finalised</h2>
-      <p id="proj3_id">A complete version of the snake game with advanced features.</p>
-      <img src="images/snake_finalised.png" alt="not loaded" height="200">
-      </a>
-    </div>
-    
-
-
-  </div>
-
-
-  </section>
-
-
-
-<section >
-<div class ="letsjava">
-<button class="button1" onclick="turn_on_bulb()">Turn on</button>
-<button class="button2" onclick="turn_off_bulb()">Turn off</button>
-</div>
-
-
-<img id ="bulb" src="images/off_bulb.png" alt="">
-
-
-<script>
-  function turn_on_bulb() {
-    document.getElementById("bulb").src = "images/on_bulb.png";
-  } 
-  function turn_off_bulb() {
-    document.getElementById("bulb").src = "images/off_bulb.png";
-  }
-</script>
-
-</section>
-
 </body>
